@@ -8,7 +8,7 @@ echo $CUR > $STATE
 
 if [ "$CUR" != "$LAST" ]; then
   echo running lclb..
-  docker run -e ETCD_WATCH_VALUE=$ETCD_WATCH_VALUE -e ETCD_WATCH_KEY=$ETCD_WATCH_KEY -e ETCD_WATCH_MODIFIED_INDEX=$ETCD_WATCH_MODIFIED_INDEX polvi/lclb python lclb.py
+  python lclb.py
 else
   echo doing nothing..
 fi
